@@ -6,7 +6,6 @@ var numbers
 var specialCharacters
 var passwordLength
 var result = [lowercase, uppercase, numbers, specialCharacters, passwordLength,]
-var passwordSpecifics = promptMessage.passwordLength
 
 // Add event listener to generate button 
 generateBtn.addEventListener("click", promptMessage); //changed from WritePassword**
@@ -19,9 +18,9 @@ function promptMessage() {
     specialCharacters = confirm('Do you want special characters?');
     passwordLength = prompt('How long would you like your password to be?');
   }
-
-if (passwordSpecifics <= 8 && >= 128) {
   
+if (passwordLength <= 8 || passwordLength >= 128) {
+  console.log(passwordLength);
 }
 
 
