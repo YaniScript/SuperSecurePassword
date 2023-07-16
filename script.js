@@ -5,7 +5,7 @@ var uppercase
 var numbers
 var specialCharacters
 var passwordLength
-var result = [lowercase, uppercase, numbers, specialCharacters, passwordLength]
+// var result = [lowercase, uppercase, numbers, specialCharacters, passwordLength]
 
 // Add event listener to generate button 
 generateBtn.addEventListener("click", promptMessage); //changed from WritePassword**
@@ -48,55 +48,23 @@ function promptMessage() {
     console.log('You do not want special characters in your password.')
   }
 
-  console.log(result)
+  let result = [lowercase, uppercase, numbers, specialCharacters, passwordLength];
+  console.log (result);
 
+  let password = generatePassword();
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
 
   }
 
- 
-  
+}
 
 
 
  
-
-
-
   
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Assignment Code
-// var generateBtn = document.querySelector("#generate");
-
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
-
-// // Add event listener to generate button -- idk what this code below does, so I'm going to comment it out.
-// // generateBtn.addEventListener("click", writePassword);
-
