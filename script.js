@@ -51,20 +51,23 @@ function promptMessage() {
   let result = [lowercase, uppercase, numbers, specialCharacters, passwordLength];
   console.log (result);
 
-  let passwordSpecifics = writePassword(result.length);
+  let passwordSpecifics = writePassword();
 
-// Write password to the #password input
+  return;
+
 function writePassword() {
-  var password = generatePassword(); //should generatePassword () be called passwordSpecifics?
+  for (i = 0; i < result.length; i++) {
+    
+  }
+  var password = result;
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
   }
 
+
 }
-
-
 
  
   
