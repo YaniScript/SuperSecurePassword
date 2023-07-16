@@ -5,7 +5,7 @@ var uppercase
 var numbers
 var specialCharacters
 var passwordLength
-var result = [lowercase, uppercase, numbers, specialCharacters, passwordLength,]
+var result = [lowercase, uppercase, numbers, specialCharacters, passwordLength]
 
 // Add event listener to generate button 
 generateBtn.addEventListener("click", promptMessage); //changed from WritePassword**
@@ -17,11 +17,46 @@ function promptMessage() {
     numbers = confirm('Do you want numbers?');
     specialCharacters = confirm('Do you want special characters?');
     passwordLength = prompt('How long would you like your password to be?');
-  }
-  
-if (passwordLength <= 8 || passwordLength >= 128) {
+    
+  if (passwordLength <= 8 || passwordLength >= 128) {
   console.log(passwordLength);
-}
+  alert('Your password must at least 8 but no more than 128 characters.');
+  passwordLength = prompt('How long would you like your password to be?')
+  }
+
+  if (lowercase === true) {
+    console.log('You want lowercase characters in your password.')
+  } else {
+    console.log('You do not want lowercase characters in your password.')
+  }
+
+  if (uppercase === true) {
+    console.log('You want uppercase characters in your password.')
+  } else {
+    console.log('You do not want uppercase characters in your password.')
+  }
+
+  if (numbers === true) {
+      console.log('You want numbers in your password.')
+  } else {
+    console.log('You do not want numbers in your password.')
+  }
+
+  if (specialCharacters === true) {
+    console.log ('You want special characters in your password.')
+  } else {
+    console.log('You do not want special characters in your password.')
+  }
+
+  console.log(result)
+
+
+
+  }
+
+ 
+  
+
 
 
  
@@ -29,33 +64,8 @@ if (passwordLength <= 8 || passwordLength >= 128) {
 
 
   
-
-
-  // // alert(userQuestions).addEventListener ("click", promptSpecificMessage);
-  //   function promptSpecificMessage() {
-  //     let passwordSpecifics = prompt('Enter the desired length of your password');
-
-  // }
-
-
-// let response = promptMessage.alert (
-//   console.log("I've been clicked")
-// )
-
-
-  // let result = alert.addEventListener("click", (e)=>{
-  //   if(result === true) {
-  //     prompt('Enter the desired length of your password')
-  //   }
-  // })
-
-//   if (result === true) {
-//     prompt('Enter the desired length of your password')
-//   } else (result === false) {
     
-//   }
 
-//   }
 
 
 
