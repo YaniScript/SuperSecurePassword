@@ -5,7 +5,6 @@ var uppercase
 var numbers
 var specialCharacters
 var passwordLength
-// var result = [lowercase, uppercase, numbers, specialCharacters, passwordLength]
 
 // Add event listener to generate button 
 generateBtn.addEventListener("click", promptMessage); //changed from WritePassword**
@@ -48,26 +47,69 @@ function promptMessage() {
     console.log('You do not want special characters in your password.')
   }
 
-  let result = [lowercase, uppercase, numbers, specialCharacters, passwordLength];
-  console.log (result);
 
-  let passwordSpecifics = writePassword();
+  let lowercaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+  let uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+  let numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+  let specialCharactersArray = ["!", "@", "#", "$", "%", "^", "&", "*", "+", "=", "?"]
 
-  return;
 
-function writePassword() {
-  for (i = 0; i < result.length; i++) {
+var actualPassword = []; 
+
+  if (lowercase === true) {
+      console.log(lowercaseArray)
+    }
+ 
+
+
+
+
+// var actualPassword = result.length[i];
+//   for (var i = 0; i < actualPassword; i++) { 
+
     
-  }
-  var password = result;
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-
-  }
+// if (result.lowercase === true) {
+//   actualPassword = actualPassword.concat(lowercaseArray)
+// }
+// if (result.uppercase === true) {
+//   actualPassword = actualPassword.concat(uppercaseArray)
+// }
+// if (result.numbers === true) {
+//   actualPassword = actualPassword.concat(numbersArray)
+// }
+// if (result.specialCharacters === true) {
+//   actualPassword = actualPassword.concat(specialCharactersArray)
+  // }
 
 
 }
+
+
+  // let result = [lowercase, uppercase, numbers, specialCharacters, passwordLength];
+
+
+
+
+  // console.log (result);
+
+//   let passwordSpecifics = writePassword();
+
+//   return;
+
+// function writePassword() {
+//   for (i = 0; i < result.length; i++) {
+    
+//   }
+//   var password = result;
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+
+//   }
+
+
+// }
 
  
   
