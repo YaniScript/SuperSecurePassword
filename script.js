@@ -56,14 +56,24 @@ var actualPassword = [];
 
 
 function writePassword() {
-  for (let i = 0; i < actualPassword; index++) {
-    const element = [i];
+  var randomPassword = [];
+  for (let i = 0; i < passwordLength; i++) {
+    let randomNumber = Math.floor(Math.random() * actualPassword.length);
+    console.log(randomNumber);
+    randomPassword.push(actualPassword[randomNumber])
   }
 
-  var randomPassword = actualPassword;
+  console.log(randomPassword);
+
+  var finalPassword = randomPassword.join("");
+
+  console.log(finalPassword);
+
+  
+
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = Math.floor(Math.random(actualPassword));
+  passwordText.value = finalPassword;
 
   }
 
