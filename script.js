@@ -56,8 +56,14 @@ function promptMessage() {
 
 var actualPassword = []; 
 
-  if (lowercase === true) {
-      console.log(lowercaseArray)
+  if (lowercase === true || uppercaseArray === true || numbersArray === true || specialCharactersArray === true) {
+      actualPassword = actualPassword.concat(lowercaseArray.concat(uppercaseArray).concat(numbersArray).concat(specialCharactersArray));
+      console.log(actualPassword);
+        for (let i = 0; i < actualPassword.length; i++) {
+          const element = array[i];
+          actualPassword
+        }
+      }
     }
  
 
@@ -83,7 +89,7 @@ var actualPassword = [];
   // }
 
 
-}
+
 
 
   // let result = [lowercase, uppercase, numbers, specialCharacters, passwordLength];
