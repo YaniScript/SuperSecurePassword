@@ -23,49 +23,60 @@ function promptMessage() {
   passwordLength = prompt('How long would you like your password to be?')
   }
 
-  if (lowercase === true) {
-    console.log('You want lowercase characters in your password.')
-  } else {
-    console.log('You do not want lowercase characters in your password.')
-  }
-
-  if (uppercase === true) {
-    console.log('You want uppercase characters in your password.')
-  } else {
-    console.log('You do not want uppercase characters in your password.')
-  }
-
-  if (numbers === true) {
-      console.log('You want numbers in your password.')
-  } else {
-    console.log('You do not want numbers in your password.')
-  }
-
-  if (specialCharacters === true) {
-    console.log ('You want special characters in your password.')
-  } else {
-    console.log('You do not want special characters in your password.')
-  }
-
-
   let lowercaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   let uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-  let numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+  let numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   let specialCharactersArray = ["!", "@", "#", "$", "%", "^", "&", "*", "+", "=", "?"]
 
 
 var actualPassword = []; 
 
-  if (lowercase === true || uppercaseArray === true || numbersArray === true || specialCharactersArray === true) {
-      actualPassword = actualPassword.concat(lowercaseArray.concat(uppercaseArray).concat(numbersArray).concat(specialCharactersArray));
-      console.log(actualPassword);
-        for (let i = 0; i < actualPassword.length; i++) {
-          const element = array[i];
-          actualPassword
-        }
-      }
-    }
- 
+  if (lowercase === true) {
+    console.log('You want lowercase characters in your password.');
+    actualPassword = [lowercaseArray];
+  } else if (lowercase != true) {
+    actualPassword = [];
+    console.log('You do not want lowercase characters in your password.')
+  }
+  
+console.log(actualPassword);
+
+  if (lowercase === true && uppercase === true) {
+    console.log('You want lowercase and uppercase characters in your password.');
+    actualPassword = [lowercaseArray.concat(uppercaseArray)];
+  } else if (lowercase != true && uppercase === true) {
+    console.log('You want only uppercase characters in your password.');
+    actualPassword = [uppercaseArray]; 
+  } else {
+    console.log('You do not want uppercase characters in your password.')
+  }
+
+  console.log(actualPassword);
+
+  if (numbers === true) {
+      console.log('You want numbers in your password.');
+      actualPassword = lowercaseArray.concat(uppercaseArray).concat(numbersArray);
+  } else {
+    console.log('You do not want numbers in your password.')
+  }
+
+  if (specialCharacters === true) {
+    console.log ('You want special characters in your password.');
+    actualPassword = lowercaseArray.concat(uppercaseArray).concat(numbersArray).concat(specialCharactersArray);
+  } else {
+    console.log('You do not want special characters in your password.')
+  }
+
+  console.log(actualPassword);
+
+
+//   let lowercaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+//   let uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+//   let numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+//   let specialCharactersArray = ["!", "@", "#", "$", "%", "^", "&", "*", "+", "=", "?"]
+
+
+// var actualPassword = []; 
 
 
 
@@ -115,7 +126,4 @@ var actualPassword = [];
 //   }
 
 
-// }
-
- 
-  
+} 
