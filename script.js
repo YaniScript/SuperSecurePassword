@@ -4,7 +4,7 @@ var lowercase
 var uppercase
 var numbers
 var specialCharacters
-var passwordLength
+var passwordLength = []
 
 // Add event listener to generate button 
 generateBtn.addEventListener("click", promptMessage); //changed from WritePassword**
@@ -57,13 +57,13 @@ var actualPassword = [];
 
 function writePassword() {
   for (let i = 0; i < actualPassword; index++) {
-    const element = actualPassword[passwordLength];
+    const element = [i];
   }
 
-  var randomPassword = Math.random(actualPassword);
+  var randomPassword = actualPassword;
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = actualPassword;
+  passwordText.value = Math.floor(Math.random(actualPassword));
 
   }
 
